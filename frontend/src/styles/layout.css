@@ -1,0 +1,304 @@
+/* Global */
+
+body {
+  margin: 0;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  background: #f3f4f6;
+}
+
+.app-shell {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+}
+
+/* Top header bar */
+
+.app-header {
+  height: 56px;
+  display: flex;
+  align-items: center;
+  padding: 0 24px;
+  background: #ffffff;
+  border-bottom: 1px solid #e5e7eb;
+  box-shadow: 0 1px 2px rgba(15, 23, 42, 0.04);
+}
+
+.app-header h1 {
+  font-size: 16px;
+  font-weight: 600;
+  margin: 0;
+}
+
+/* Main layout: sidebar + content */
+
+.app-body {
+  display: flex;
+  height: calc(100vh - 56px);
+}
+
+.sidebar {
+  width: 230px;
+  background: #f9fafb;
+  border-right: 1px solid #e5e7eb;
+  padding: 16px 12px;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.sidebar-header {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 4px 8px;
+}
+
+.sidebar-logo {
+  width: 32px;
+  height: 32px;
+  border-radius: 8px;
+  background: #4f46e5;
+  color: #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 600;
+}
+
+.sidebar-title {
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.sidebar-user {
+  font-size: 12px;
+  color: #6b7280;
+}
+
+.sidebar-section {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.sidebar-section-title {
+  font-size: 11px;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: #9ca3af;
+  margin: 8px 4px 4px;
+}
+
+.sidebar-item {
+  border: none;
+  background: transparent;
+  text-align: left;
+  font-size: 13px;
+  padding: 6px 8px;
+  border-radius: 6px;
+  cursor: pointer;
+  color: #4b5563;
+}
+
+.sidebar-item:hover {
+  background: #e5e7eb;
+}
+
+.sidebar-item-active {
+  background: #e0e7ff;
+  color: #1e40af;
+}
+
+/* Content area */
+
+.app-content {
+  flex: 1;
+  padding: 16px 24px 24px;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+/* Top filters row */
+
+.top-filters-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 16px;
+}
+
+.top-filters-left {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.top-filter-pill {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  padding: 6px 10px;
+  border-radius: 999px;
+  background: #ffffff;
+  border: 1px solid #e5e7eb;
+  font-size: 12px;
+}
+
+.top-filter-pill span {
+  color: #6b7280;
+}
+
+.top-filter-pill select {
+  border: none;
+  outline: none;
+  background: transparent;
+  font-size: 12px;
+  color: #111827;
+}
+
+/* Search + sort on right */
+
+.top-filters-right {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.search-bar input {
+  width: 260px;
+  padding: 8px 12px;
+  border-radius: 999px;
+  border: 1px solid #d1d5db;
+  font-size: 13px;
+}
+
+.sort-dropdown {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.sort-dropdown select,
+.sort-dropdown button {
+  padding: 8px 10px;
+  border-radius: 999px;
+  border: 1px solid #d1d5db;
+  background: #ffffff;
+  font-size: 12px;
+  cursor: pointer;
+}
+
+/* Summary cards */
+
+.summary-cards-row {
+  display: flex;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+
+.summary-card {
+  flex: 0 0 220px;
+  background: #ffffff;
+  border-radius: 12px;
+  padding: 10px 14px;
+  box-shadow: 0 1px 2px rgba(15, 23, 42, 0.04);
+  border: 1px solid #e5e7eb;
+}
+
+.summary-label {
+  font-size: 12px;
+  color: #6b7280;
+  margin: 0 0 4px;
+}
+
+.summary-value {
+  font-size: 18px;
+  font-weight: 600;
+  margin: 0 0 2px;
+}
+
+.summary-sub {
+  font-size: 11px;
+  color: #9ca3af;
+  margin: 0;
+}
+
+/* Table + pagination */
+
+.table-section {
+  flex: 1;
+  background: #ffffff;
+  border-radius: 12px;
+  border: 1px solid #e5e7eb;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+}
+
+.sales-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 13px;
+}
+
+.sales-table thead {
+  background: #f9fafb;
+}
+
+.sales-table th,
+.sales-table td {
+  padding: 8px 12px;
+  border-bottom: 1px solid #e5e7eb;
+  text-align: left;
+  white-space: nowrap;
+}
+
+.sales-table th {
+  font-weight: 500;
+  color: #6b7280;
+}
+
+.no-results {
+  padding: 16px;
+}
+
+.pagination-wrapper {
+  display: flex;
+  justify-content: center;
+  padding: 8px 12px 10px;
+}
+
+.pagination {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.pagination button {
+  padding: 6px 10px;
+  font-size: 12px;
+  border-radius: 999px;
+  border: 1px solid #d1d5db;
+  background: #ffffff;
+  cursor: pointer;
+}
+
+.pagination button:disabled {
+  opacity: 0.5;
+  cursor: default;
+}
+
+.pagination span {
+  font-size: 12px;
+  color: #6b7280;
+}
+
+/* Loading */
+
+.loading-state {
+  padding: 16px;
+}
