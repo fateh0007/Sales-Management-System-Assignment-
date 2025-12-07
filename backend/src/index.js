@@ -19,7 +19,9 @@ const PORT = process.env.PORT || 4000;
 
 (async () => {
   try {
-    const data = await loadSalesData("truestate_assignment_dataset.csv");
+    const DATASET_PATH = process.env.DATASET_PATH || "sample_dataset.csv";
+    console.log(`Loading dataset from: ${DATASET_PATH}`);
+    const data = await loadSalesData(DATASET_PATH);
     setSalesData(data);
 
     app.listen(PORT, () => {
